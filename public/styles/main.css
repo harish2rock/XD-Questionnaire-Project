@@ -1,0 +1,72 @@
+body, .jumbotron{background-color:#000;}
+
+.modal .title{
+    color:#000;
+    font-size:16px;
+    margin-bottom:0px;
+}
+.modal-body{
+    max-height:200px;
+    overflow-y:auto;
+}
+.btn.btn-modal{
+    width:100%;
+}
+.row{
+    margin-bottom:20px;
+}
+.row h3, .row p{
+    color:#fff;
+}
+.btn-primary, .btn-primary:hover{
+    background-color:rgb(204,12,13) !important;
+    border-color:rgb(204,12,13) !important;
+}
+.form-group{
+    text-align:center;
+}
+.form-control{
+    display:inline;
+    max-width:300px;
+}
+.checkbox input[type=checkbox] {
+    float: none;
+}
+.checkbox label {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.welcome-text h3,.welcome-text p{
+    font-size:16px;
+}
+.xd-textarea{
+    max-width:100%;
+    min-height:300px;
+    width:100%;
+}
+
+#rootwizard .nav>li>a:hover, #rootwizard .nav>li>a:focus{
+    background: none;
+}
+
+#rootwizard .nav-pills>li.active>a, #rootwizard .nav-pills>li.active>a:hover, #rootwizard .nav-pills>li.active>a:focus {
+    background-color: #428bca;
+}
+
+#rootwizard .nav a:hover, #rootwizard .nav a:focus {
+    color: #428bca;
+    cursor: default;
+}
+#rootwizard .nav .active a:hover, #rootwizard .nav .active a:focus { color: #fff; }
+
+@media (min-width: 992px) {
+    .modal .title{
+        font-size:32px;
+    }
+    .btn.btn-modal{
+        width:235px;
+    }
+    .welcome-text h3,.welcome-text p{
+        font-size:24px;
+    }
+}
