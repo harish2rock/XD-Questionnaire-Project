@@ -8,4 +8,4 @@ http://iamstef.net/ember-app-kit/guides/getting-started.html
 
 
 Prototype Refinements and Improvements
-========================
+--------------------------------
