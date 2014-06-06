@@ -9,3 +9,9 @@ http://iamstef.net/ember-app-kit/guides/getting-started.html
 
 Prototype Refinements and Improvements
 --------------------------------
+
+
+
+
+Ember Template and Route Creation
+--------------------------------
