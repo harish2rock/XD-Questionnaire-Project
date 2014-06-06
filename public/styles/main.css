@@ -1,72 +1,314 @@
-body, .jumbotron{background-color:#000;}
-
-.modal .title{
-    color:#000;
-    font-size:16px;
-    margin-bottom:0px;
+@import '../bootstrap-3.1.1/dist/css/bootstrap.css';
+body,
+.jumbotron {
+  background-color: #000;
 }
-.modal-body{
-    max-height:200px;
-    overflow-y:auto;
+.btn.btn-modal {
+  width: 100%;
 }
-.btn.btn-modal{
-    width:100%;
+.row {
+  margin-bottom: 20px;
 }
-.row{
-    margin-bottom:20px;
+.btn-primary,
+.btn-primary:hover {
+  background-color: #cc0c0d !important;
+  border-color: #cc0c0d !important;
 }
-.row h3, .row p{
-    color:#fff;
+.xd-textarea {
+  max-width: 100%;
+  min-height: 300px;
+  width: 100%;
 }
-.btn-primary, .btn-primary:hover{
-    background-color:rgb(204,12,13) !important;
-    border-color:rgb(204,12,13) !important;
+@media (min-width: 992px) {
+  .modal .title {
+    font-size: 32px;
+  }
+  .btn.btn-modal {
+    width: 235px;
+  }
+  .welcome-text h3,
+  .welcome-text p {
+    font-size: 24px;
+  }
 }
-.form-group{
-    text-align:center;
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
 }
-.form-control{
-    display:inline;
-    max-width:300px;
+.modal .title {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.btn.btn-modal {
+  width: 100%;
+}
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.btn-close {
+  background: url(../images/icon_states.png) 0 -349px no-repeat;
+  width: 36px;
+  height: 20px;
+  border: 0;
+  float: right;
+  margin-right: -30px;
+  margin-top: -15px;
+  -webkit-appearance: none;
+}
+button.btn-close:hover {
+  background: url(../images/icon_states.png) 0 -368px no-repeat;
+  border: 0;
+}
+button.btn-close:focus,
+button.btn-close:active {
+  outline: 0;
+}
+.btn:focus,
+.btn:active,
+.btn:visited {
+  outline: 0;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-dialog {
+  position: relative;
+  z-index: 1050;
+  width: auto;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  color: #464646;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  outline: none;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  padding: 10px 20px 30px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal-header {
+  min-height: 16.428571429px;
+  padding: 15px;
+  border-bottom: 0px solid #d0d0d0;
+}
+.modal-header .close {
+  color: #c00000;
+  font-size: 2em;
+  position: relative;
+  right: -20px;
+  top: -5px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+.modal-body {
+  max-height: 200px;
+  overflow-y: auto;
+  position: relative;
+  padding: 20px;
+}
+.modal-body .subhead {
+  font-family: 'ProximaNova';
+  font-weight: 700;
+  font-size: 18px;
+}
+.modal-body li {
+  font-family: 'ProximaNova';
+  font-weight: 200;
+  font-size: 18px;
+}
+.modal-body li:first-child {
+  padding-left: 30px;
+}
+.modal-body li:first-child input {
+  margin-left: -30px;
+}
+.modal .title.paperless {
+  font-family: 'CenturyGothic';
+  font-size: 54px;
+  font-weight: bold;
+  color: #00ae68;
+}
+.modal-footer {
+  padding: 19px 20px 20px;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 0px solid #e5e5e5;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 700px;
+    height: 510px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+.modal .title {
+  margin: 0;
+  line-height: 1.428571429;
+  font-family: 'CenturyGothic';
+  font-weight: normal;
+  font-size: 42px;
+  color: #0082de;
+}
+.modal .subhead {
+  font-family: 'CenturyGothic';
+  font-weight: bold;
+  font-size: 30px;
+}
+.modal .copy {
+  font-family: 'ProximaNova';
+  font-weight: 400;
+  font-size: 18px;
+}
+.icon-checkmark-green {
+  background: url(../images/icon-checkmark-green.png) center center no-repeat;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.btn.btn-modal {
+  font-size: 20px;
+  width: 235px;
+}
+input.paperless {
+  width: 300px;
+}
+#rootwizard .nav > li > a:hover,
+#rootwizard .nav > li > a:focus {
+  background: none;
+}
+#rootwizard .nav-pills > li.active > a:hover,
+#rootwizard .nav-pills > li.active > a:focus {
+  background-color: #428bca;
+}
+#rootwizard .nav a:hover,
+#rootwizard .nav a:focus {
+  color: #428bca;
+  cursor: default;
+}
+#rootwizard .nav .active a:hover,
+#rootwizard .nav .active a:focus {
+  color: #fff;
+}
+.title {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.row h3,
+.row p {
+  color: #fff;
+}
+.form-group {
+  text-align: center;
+}
+#login .form-control {
+  display: inline;
+  max-width: 300px;
 }
 .checkbox input[type=checkbox] {
-    float: none;
+  float: none;
 }
 .checkbox label {
-    color: #FFFFFF;
-    font-size: 16px;
-}
-.welcome-text h3,.welcome-text p{
-    font-size:16px;
-}
-.xd-textarea{
-    max-width:100%;
-    min-height:300px;
-    width:100%;
-}
-
-#rootwizard .nav>li>a:hover, #rootwizard .nav>li>a:focus{
-    background: none;
-}
-
-#rootwizard .nav-pills>li.active>a, #rootwizard .nav-pills>li.active>a:hover, #rootwizard .nav-pills>li.active>a:focus {
-    background-color: #428bca;
-}
-
-#rootwizard .nav a:hover, #rootwizard .nav a:focus {
-    color: #428bca;
-    cursor: default;
-}
-#rootwizard .nav .active a:hover, #rootwizard .nav .active a:focus { color: #fff; }
-
-@media (min-width: 992px) {
-    .modal .title{
-        font-size:32px;
-    }
-    .btn.btn-modal{
-        width:235px;
-    }
-    .welcome-text h3,.welcome-text p{
-        font-size:24px;
-    }
+  color: #FFFFFF;
+  font-size: 16px;
 }
