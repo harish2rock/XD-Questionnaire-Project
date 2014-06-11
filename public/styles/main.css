@@ -1,31 +1,10 @@
-@import '../bootstrap-3.1.1/dist/css/bootstrap.css';
-body,
-.jumbotron {
-  background-color: #000;
-}
-.btn.btn-modal {
-  width: 100%;
-}
-.row {
-  margin-bottom: 20px;
-}
-.btn-primary,
-.btn-primary:hover {
-  background-color: #cc0c0d !important;
-  border-color: #cc0c0d !important;
-}
+@import '../../vendor/bootstrap/dist/css/bootstrap.css';
 .xd-textarea {
   max-width: 100%;
   min-height: 300px;
   width: 100%;
 }
 @media (min-width: 992px) {
-  .modal .title {
-    font-size: 32px;
-  }
-  .btn.btn-modal {
-    width: 235px;
-  }
   .welcome-text h3,
   .welcome-text p {
     font-size: 24px;
@@ -165,10 +144,6 @@ button.btn-close:active {
   right: -20px;
   top: -5px;
 }
-.modal-title {
-  margin: 0;
-  line-height: 1.428571429;
-}
 .modal-body {
   max-height: 200px;
   overflow-y: auto;
@@ -246,7 +221,7 @@ button.btn-close:active {
   line-height: 1.428571429;
   font-family: 'CenturyGothic';
   font-weight: normal;
-  font-size: 42px;
+  font-size: 32px;
   color: #0082de;
 }
 .modal .subhead {
@@ -289,14 +264,17 @@ input.paperless {
 #rootwizard .nav .active a:focus {
   color: #fff;
 }
-.title {
-  color: #000;
-  font-size: 16px;
-  margin-bottom: 0px;
+.btn-primary,
+.btn-primary:hover {
+  background-color: #cc0c0d !important;
+  border-color: #cc0c0d !important;
 }
-.row h3,
-.row p {
-  color: #fff;
+body,
+.jumbotron {
+  background-color: #000;
+}
+.row {
+  margin-bottom: 20px;
 }
 .form-group {
   text-align: center;
@@ -311,4 +289,13 @@ input.paperless {
 .checkbox label {
   color: #FFFFFF;
   font-size: 16px;
+}
+.title {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.row h3,
+.row p {
+  color: #fff;
 }
