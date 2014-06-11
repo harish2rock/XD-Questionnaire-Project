@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $('#terms').click(function(){
+    $('#terms').click(function () {
         $('#termsModal').modal('show');
     });
 
@@ -16,4 +16,12 @@ $(document).ready(function(){
 
     });
 
+});
+
+$(function () {
+    $('#ms_timer').countdowntimer({
+        minutes: 30,
+        seconds: 00,
+        size: "lg"
+    });
 });
