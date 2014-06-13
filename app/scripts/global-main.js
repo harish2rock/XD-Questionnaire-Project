@@ -1,4 +1,22 @@
-$(document).ready(function(){
+Ember.View.reopen({
+
+    didInsertElement: function(){
+        $(document).ready(function(){
+
+             $('#terms').click(function(){
+                $('#termsModal').modal('show');
+            });
+
+            $('#btnStart').click(function () {
+
+                if ($('#chkAgree').is(':checked')) {
+                    return true;
+                }
+                else {
+                alert('You must read and agree to the Terms and Conditions');
+                return false;
+                }
+        });
 
     $('#rootwizard').bootstrapWizard({
         onTabClick: function(tab, navigation, index) {
@@ -25,4 +43,6 @@ $(document).ready(function(){
         $('#rootwizard').find("a[href*='tab1']").trigger('click');
     });
 
+});
+    }
 });

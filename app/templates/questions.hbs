@@ -1,0 +1,26 @@
+<div class="jumbotron">
+            <div class="container">
+               <div id="rootwizard">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container question">
+                        {{#each}}
+                        {{#link-to 'question' this}}
+                        Q{{id}}
+                        {{/link-to}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div>
+                {{outlet}}
+            </div>
+        </div>
+            </div>
+            <div class="container">
+                <div class="welcome-text"><h3 style="color:#fff;text-align:center;">Time Remaining</h3></div>
+                <div style="text-align:center;"><span id="ms_timer"></span></div>
+            </div>
+        </div>
+
+
