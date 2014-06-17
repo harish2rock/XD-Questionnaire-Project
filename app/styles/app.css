@@ -314,3 +314,12 @@ body,
 .row p {
   color: #fff;
 }
+
+/*
+  Timer styles
+*/
+#timer{
+  text-align: center;
+  color:#bada55;
+  font-size: 2em;
+}
