@@ -9,6 +9,13 @@
     "DS": true,
     "$": true
   },
+  "globals": {
+    "alert": false,
+    "require": false,
+    "questions": false,
+    "setInterval": false,
+    "console": false
+  },
   "node" : false,
   "browser" : false,
   "boss" : true,
