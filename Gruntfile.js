@@ -227,8 +227,8 @@ module.exports = function(grunt) {
                      'compass:compile',
                      'sass:compile',
                      'less:compile',
-                     'stylus:compile',
                      'copy:cssToResult',
+                     'stylus:compile',
                      'autoprefixer:app'
                      ]));
 
