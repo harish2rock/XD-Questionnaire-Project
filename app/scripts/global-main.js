@@ -1,4 +1,21 @@
 Ember.View.reopen({
+    parentViewDidChange: function(){
+        var timer = $('#timer');
+        var start_time = moment();
+        var end_time = moment.minute(30);
+
+        // timer scripts
+        setInterval(function(){
+            // var diff = moment(end_time).diff(moment());
+            // var result = end_time.subtract(start_time);
+            // var result = moment(start_time).fromNow();
+            var result = start_time.from(end_time);
+            // var result = end_time.get('seconds');
+
+            // $('#timer').html(moment(diff).humanize());
+            console.log(result);
+        }, 1000);
+    }, 
 
     didInsertElement: function(){
         $(document).ready(function(){
@@ -11,8 +28,7 @@ Ember.View.reopen({
 
                 if ($('#chkAgree').is(':checked')) {
                     return true;
-                }
-                else {
+                } else {
                     $('.checkbox').velocity("callout.shake", 750);
                     $('.checkbox').addClass('error');
                     return false;
@@ -28,33 +44,6 @@ Ember.View.reopen({
                     $('.checkbox').removeClass('error');
                 }
             });
-
-            // unused post-ember?
-            $('#rootwizard').bootstrapWizard({
-                onTabClick: function(tab, navigation, index) {
-                    return false;
-                },
-                onTabShow: function(tab, navigation, index) {
-                    var $total = navigation.find('li').length;
-                    var $current = index+1;
-                    var $percent = ($current/$total) * 100;
-                    $('#rootwizard').find('.bar').css({width:$percent+'%'});
-                    // If it's the last tab then hide the last button and show the finish instead
-                    if($current >= $total) {
-                        $('#rootwizard').find('.pager .next').hide();
-                        $('#rootwizard').find('.pager .finish').show();
-                        $('#rootwizard').find('.pager .finish').removeClass('disabled');
-                    } else {
-                        $('#rootwizard').find('.pager .next').show();
-                        $('#rootwizard').find('.pager .finish').hide();
-                    }
-                }
-            });
-            $('#rootwizard .finish').click(function() {
-                alert('Finished!');
-                $('#rootwizard').find("a[href*='tab1']").trigger('click');
-            });
-
         });
     }
 });
