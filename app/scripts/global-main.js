@@ -17,35 +17,22 @@ Ember.View.reopen({
                 }
             });
 
-            $('#rootwizard').bootstrapWizard({
-                onTabClick: function(tab, navigation, index) {
-                    return false;
-                },
-                onTabShow: function(tab, navigation, index) {
-                    var $total = navigation.find('li').length;
-                    var $current = index+1;
-                    var $percent = ($current/$total) * 100;
-                    $('#rootwizard').find('.bar').css({width:$percent+'%'});
-                    // If it's the last tab then hide the last button and show the finish instead
-                    if($current >= $total) {
-                        $('#rootwizard').find('.pager .next').hide();
-                        $('#rootwizard').find('.pager .finish').show();
-                        $('#rootwizard').find('.pager .finish').removeClass('disabled');
-                    } else {
-                        $('#rootwizard').find('.pager .next').show();
-                        $('#rootwizard').find('.pager .finish').hide();
-                    }
-                }
-            });
-            $('#rootwizard .finish').click(function() {
-                alert('Finished!');
-                $('#rootwizard').find("a[href*='tab1']").trigger('click');
-            });
+            // if start time is declared, use that as start time
+            // if not declared, create new start time, save to cookie
+            // check out moment JS
 
             // timer
             setInterval(function(){
                 // timer.html($.now())
-                console.log('test');
+                // console.log('test');
+
+                // starts with 30:00:00
+
+                // (epoch start time + 30 mins) - epoch start time
+                // => how much time is left?
+
+                // convert that back to a readable format
+
             }, 1000);
 
         }); // end document ready
