@@ -5,9 +5,8 @@ Ember.View.reopen({
         var time_limit_in_minutes = 0.25;
         var end_time = (start_time + (time_limit_in_minutes * 60 * 1000));
 
-        // var hashed_end_time = calcMD5(end_time);
-
-        console.log("END TIME SET ONCE: "+end_time);
+        // var hashed_end_time = CryptoJS.MD5(end_time);
+        // console.log("Hashed end time: "+hashed_end_time);
 
         // timer scripts
         setInterval(function(){
