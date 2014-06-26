@@ -1,18 +1,21 @@
 Ember.View.reopen({
     parentViewDidChange: function(){
         var timer = $('#timer');
-        var start_time = moment();
-        var end_time = moment.minute(30);
+        var start_time = $.now();
+        var time_limit_in_minutes = 0.25;
+        var end_time = (start_time + (time_limit_in_minutes * 60 * 1000));
+
+        // var hashed_end_time = calcMD5(end_time);
+
+        console.log("END TIME SET ONCE: "+end_time);
 
         // timer scripts
         setInterval(function(){
-            // var diff = moment(end_time).diff(moment());
-            // var result = end_time.subtract(start_time);
-            // var result = moment(start_time).fromNow();
-            var result = start_time.from(end_time);
-            // var result = end_time.get('seconds');
+            var now = $.now();
+            var result = (now >= end_time) ? "time's up!" : "not yet...";
 
-            // $('#timer').html(moment(diff).humanize());
+            // console.log("S: "+start_time+" / E: "+end_time+" / NOW: "+now);
+
             console.log(result);
         }, 1000);
     }, 
