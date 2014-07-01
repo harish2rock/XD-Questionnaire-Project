@@ -4,18 +4,21 @@ Ember.View.reopen({
         var start_time = $.now();
         var time_limit_in_minutes = 0.25;
         var end_time = (start_time + (time_limit_in_minutes * 60 * 1000));
-
-        // var hashed_end_time = CryptoJS.MD5(end_time);
-        // console.log("Hashed end time: "+hashed_end_time);
+        var hashed_end_time = CryptoJS.MD5(end_time.toString());
 
         // timer scripts
         setInterval(function(){
             var now = $.now();
-            var result = (now >= end_time) ? "time's up!" : "not yet...";
-
+            var hashed_now = CryptoJS.MD5(now.toString());
+            // var result = (now >= end_time) ? "time's up!" : "not yet...";
             // console.log("S: "+start_time+" / E: "+end_time+" / NOW: "+now);
-
-            console.log(result);
+            // console.log(result);
+            
+            if (hashed_now == hashed_end_time){
+                console.log("time's up!");
+            } else {
+                console.log("before or after");
+            }
         }, 1000);
     }, 
 
