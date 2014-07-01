@@ -20,20 +20,24 @@ Ember.View.reopen({
                 console.log("before or after");
             }
         }, 1000);
-    }, 
-
+    },
     didInsertElement: function(){
         $(document).ready(function(){
 
             $('#terms').click(function(){
-                $('#termsModal').modal('show');
+                $('#termsModal').modal({
+                    keyboard: true,
+                    show: true,
+                    backdrop: true
+                });
             });
 
             $('#btnStart').click(function () {
 
                 if ($('#chkAgree').is(':checked')) {
                     return true;
-                } else {
+                }
+                else {
                     $('.checkbox').velocity("callout.shake", 750);
                     $('.checkbox').addClass('error');
                     return false;
@@ -49,6 +53,7 @@ Ember.View.reopen({
                     $('.checkbox').removeClass('error');
                 }
             });
+
         });
     }
 });

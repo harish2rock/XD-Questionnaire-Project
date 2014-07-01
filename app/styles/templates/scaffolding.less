@@ -1,5 +1,38 @@
-body, .jumbotron {
+html, body {
+    height: 100%;
+}
+
+.ember-view {
+    min-height: 100%;
+}
+
+.main {
+    overflow:auto;
+    padding-bottom:50px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+    position: relative;
+    margin-top: -50px; /* negative value of footer height */
+    height: 50px;
+    clear:both;
+    padding-top:20px;
+}
+
+body {
     background-color: @body-bg;
+}
+
+div.ember-view {
+    background-color: @wrap-bg;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 15px;
+    width:90%;
+}
+
+.container {
+    width: 100%;
 }
 
 .row {

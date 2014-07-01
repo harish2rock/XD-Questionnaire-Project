@@ -1,12 +1,17 @@
-<div class="jumbotron">
-            <div class="container">
-               <div id="rootwizard">
+<div class="wrap">
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="/assets/images/logo.png" alt="Perficient XD"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
             <div class="navbar">
                 <div class="navbar-inner">
-                    <div class="container question">
+                    <div class="question">
                         {{#each}}
                         {{#link-to 'question' this}}
-                        Q{{id}}
+                        Question {{id}}
                         {{/link-to}}
                         {{/each}}
                     </div>
@@ -16,18 +21,20 @@
                 {{outlet}}
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="welcome-text">
+              <h3 style="color:#fff;text-align:center;">
+                Time Remaining
+              </h3>
+              <div id="timer">
+                00:00:00
+              </div>
             </div>
-            <div class="container">
-                <div class="welcome-text">
-                    <h3 style="color:#fff;text-align:center;">
-                        Time Remaining
-                    </h3>
-                    <div id="timer">
-                        00:00:00
-                    </div>
-                </div>
-                <div style="text-align:center;"><span id="ms_timer"></span></div>
-            </div>
+            <div style="text-align:center;"><span id="ms_timer"></span></div>
         </div>
+    </div>
+</div>
 
 
