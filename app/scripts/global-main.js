@@ -21,10 +21,6 @@ Ember.View.reopen({
                     $('.checkbox').addClass('error');
                     return false;
                 }
-                /*else {
-                alert('You must read and agree to the Terms and Conditions');
-                return false;
-                }*/
             });
 
             $('.checkbox').change(function(){

@@ -1,7 +1,11 @@
 <div class="wrap">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-6">
             <img src="/assets/images/logo.png" alt="Perficient XD"/>
+        </div>
+        <div class="col-xs-6">
+            <div class="timer"><h3 style="text-align:center;">Time Remaining</h3></div>
+            <div style="text-align:center;"><span id="ms_timer"></span></div>
         </div>
     </div>
     <div class="row">
@@ -20,12 +24,6 @@
             <div>
                 {{outlet}}
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="welcome-text"><h3 style="color:#fff;text-align:center;">Time Remaining</h3></div>
-            <div style="text-align:center;"><span id="ms_timer"></span></div>
         </div>
     </div>
 </div>
