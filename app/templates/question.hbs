@@ -4,4 +4,14 @@
         <p>{{body}}</p>
     </div>
 </div>
-{{textarea value=answer}}
+{{#if textarea}}
+{{textarea value=answer id=id}}
+{{else}}
+{{#if radio}}
+  <input type="radio" name="radioOptions" value="{{options.value1}}">{{options.value1}} <br />
+  <input type="radio" name="radioOptions" value="{{options.value2}}">{{options.value2}} <br />
+  <input type="radio" name="radioOptions" value="{{options.value3}}">{{options.value3}} <br />
+  <input type="radio" name="radioOptions" value="{{options.value4}}">{{options.value4}} <br />
+
+{{/if}}
+{{/if}}
