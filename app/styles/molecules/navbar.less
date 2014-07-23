@@ -1,6 +1,49 @@
-.navbar {
-    border: 0;
-    margin-bottom: 0;
-    min-height: 0;
-    padding-bottom: 20px;
+nav {
+    background-color: #000000;
+    .navbar {
+        border: 0;
+        margin-bottom: 0;
+        min-height: 0;
+        padding: 10px 0;
+        .question {
+            display: inline;
+            a {
+                background-color:#fff;
+                border-radius: 6px;
+                display: inline-block;
+                margin:0 10px 0 0;
+                padding:8px;
+                text-align:center;
+                transition: background-color 0.25s ease;
+                &:hover, &.active {
+                    background-color: #dfdfdf;
+                    color: #3276b1;
+                    text-decoration: none;
+                }
+            }
+        }
+        .submit {
+            background-color:#fff;
+            border: 0;
+            border-radius: 6px;
+            float: right;
+            margin: 3px 0 0;
+            padding:6px;
+            text-align:center;
+            transition: background-color 0.25s ease;
+            &:hover, &.active {
+                background-color: #dfdfdf;
+                color: #3276b1;
+                text-decoration: none;
+            }
+            a {
+                &:hover, &.active {
+                    color: #3276b1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
+
+

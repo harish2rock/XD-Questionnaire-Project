@@ -1,15 +1,15 @@
 <div class="wrap">
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-12">
             <img src="/assets/images/logo.png" alt="Perficient XD"/>
         </div>
-        <div class="col-xs-6">
+        <!--<div class="col-xs-6">
             <h3 style="text-align:center;">Time Remaining</h3>
             <div class="timer"></div>
             <div style="text-align:center;"><span id="ms_timer"></span></div>
-        </div>
+        </div>-->
     </div>
-    <div class="row">
+    <nav class="row">
         <div class="col-xs-12">
             <div class="navbar">
                 <div class="navbar-inner">
@@ -20,8 +20,13 @@
                         {{/link-to}}
                         {{/each}}
                     </div>
+                    <button type="submit" class="submit"><a href="">Submit Answers</a></button>
                 </div>
             </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-xs-12">
             <div>
                 {{outlet}}
             </div>

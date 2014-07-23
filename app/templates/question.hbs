@@ -8,10 +8,10 @@
 {{textarea value=answer id=id}}
 {{else}}
 {{#if radio}}
-  <input type="radio" name="radioOptions" value="{{options.value1}}">{{options.value1}} <br />
-  <input type="radio" name="radioOptions" value="{{options.value2}}">{{options.value2}} <br />
-  <input type="radio" name="radioOptions" value="{{options.value3}}">{{options.value3}} <br />
-  <input type="radio" name="radioOptions" value="{{options.value4}}">{{options.value4}} <br />
+  <input type="radio" name="radioOptions" value="{{options.value1}}" class="css-checkbox" id="radio1"><label for="radio1" class="css-label">{{options.value1}}</label><br />
+  <input type="radio" name="radioOptions" value="{{options.value2}}" class="css-checkbox" id="radio2"><label for="radio2" class="css-label">{{options.value2}}</label><br />
+  <input type="radio" name="radioOptions" value="{{options.value3}}" class="css-checkbox" id="radio3"><label for="radio3" class="css-label">{{options.value3}}</label><br />
+  <input type="radio" name="radioOptions" value="{{options.value4}}" class="css-checkbox" id="radio4"><label for="radio4" class="css-label">{{options.value4}}</label><br />
 
 {{/if}}
 {{/if}}
