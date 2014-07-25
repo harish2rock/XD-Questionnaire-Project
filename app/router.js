@@ -4,6 +4,7 @@ Router.map(function() {
    this.resource('questions', function () {
         this.resource('question', { path: ':question_id' });
     });
+   this.resource('thank-you');
   //this.route('helper-test');
   // this.resource('posts', function() {
   //   this.route('new');
