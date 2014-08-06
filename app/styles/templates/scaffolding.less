@@ -1,4 +1,4 @@
-html, body {
+html, body, .container {
     height: 100%;
 }
 
@@ -24,6 +24,7 @@ body {
 
 div.ember-view {
     background-color: @wrap-bg;
+    height: 100%;
     margin: 0 auto;
     max-width: 960px;
     padding: 15px;
@@ -31,9 +32,26 @@ div.ember-view {
 }
 
 .container {
+    display:table;
+    margin-top: 0;
+    padding: 0 0 0 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
 }
 
 .row {
-    margin-bottom: 20px;
+    display: table-row;
+    height: 100%;
+}
+
+.col-xs-3, .col-xs-9 {
+    display: table-cell;
+    float: none;
+}
+
+.col-xs-3 {
+    background-color: #000000;
+    padding-top: 0;
+    vertical-align: top;
 }

@@ -1,23 +1,23 @@
-<div class="wrap">
-    {{partial "logo"}}
-    <nav class="row">
-        <div class="col-xs-12">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <div class="question">
-                        {{#each model}}
-                        {{#link-to 'question' this}}
-                        Question {{id}}
-                        {{/link-to}}
-                        {{/each}}
-                    </div>
-                    {{#link-to 'thank-you'}}<button type="submit" class="submit">Submit Answers</button>{{/link-to}}
-                </div>
-            </div>
-        </div>
-    </nav>
+<div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-3">
+            <img src="/assets/images/logo.png" alt="Perficient XD" class="logo">
+            <nav>
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="question">
+                            {{#each model}}
+                            <li>{{#link-to 'question' this}}
+                            Question {{id}}
+                            {{/link-to}}</li>
+                            {{/each}}
+                        </ul>
+                        {{#link-to 'thank-you'}}<button type="submit" class="submit">Submit Answers</button>{{/link-to}}
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-xs-9">
             <div>
                 {{outlet}}
             </div>
