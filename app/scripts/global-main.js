@@ -1,5 +1,34 @@
 Ember.View.reopen({
     parentViewDidChange: function(){
+         $(document).ready(function(){
+
+            $('#terms').click(function(){
+                $('#termsModal').modal({
+                    keyboard: true,
+                    show: true,
+                    backdrop: true
+                });
+            });
+
+            $('#btnStart').click(function () {
+
+                if ($('#chkAgree').is(':checked')) {
+                    return true;
+                }
+                else {
+                    $('.checkbox').velocity("callout.shake", 750);
+                    $('.checkbox').addClass('error');
+                    return false;
+                }
+            });
+
+            $('.checkbox').change(function(){
+                if ($('input#chkAgree').prop('checked')) {
+                    $('.checkbox').removeClass('error');
+                }
+            });
+
+        });
         // var timer = $('#timer');
         // var start_time = $.now();
         // var time_limit_in_minutes = 0.25;
@@ -48,34 +77,6 @@ Ember.View.reopen({
 
     },
     didInsertElement: function(){
-        $(document).ready(function(){
 
-            $('#terms').click(function(){
-                $('#termsModal').modal({
-                    keyboard: true,
-                    show: true,
-                    backdrop: true
-                });
-            });
-
-            $('#btnStart').click(function () {
-
-                if ($('#chkAgree').is(':checked')) {
-                    return true;
-                }
-                else {
-                    $('.checkbox').velocity("callout.shake", 750);
-                    $('.checkbox').addClass('error');
-                    return false;
-                }
-            });
-
-            $('.checkbox').change(function(){
-                if ($('input#chkAgree').prop('checked')) {
-                    $('.checkbox').removeClass('error');
-                }
-            });
-
-        });
     }
 });
