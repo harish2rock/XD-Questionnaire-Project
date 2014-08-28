@@ -3,7 +3,7 @@
   $(function(){
     $('#submit').click(function(e){
       e.preventDefault();
-      var formData = JSON.stringify($("#questionnaire_form").serializeArray());
+      var formData = $("#questionnaire_form").serializeArray();
       console.log(formData);
       $.post("send_mail.php", formData)
         .done(function(data){
