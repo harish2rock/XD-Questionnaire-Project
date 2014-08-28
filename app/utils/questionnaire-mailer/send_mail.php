@@ -1,13 +1,19 @@
 <?php
+var_dump($_POST);
 require_once 'vendor/autoload.php';
 
 //
 // Form Answers
-// $data = var_dump(json_decode(file_get_contents("php://input")), true);
+$data = file_get_contents("php://input");
+// $q1 = $_POST["q1"];
+// $q1 = $data["q1"];
+$q1 = file_get_contents($data->{"q1"});
+$q2 = $_POST["q2"];
+$q3 = $_POST["q3"];
+// $data = json_decode($_POST['q1']);
 // $q1 = $data->{'q1'};
-// $q2 = $_POST["q2"];
-// $q3 = $_POST["q3"];
-$data = json_decode($_POST['q1']);
+// $data = $_POST;
+// print_r($_POST);
 
 $m = new PHPMailer;
 

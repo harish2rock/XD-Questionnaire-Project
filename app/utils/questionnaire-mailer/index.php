@@ -14,13 +14,12 @@
           console.log("failed to post")
         })
         .always(function(data){
-
         })
     });
   });
 </script>
 
-<form id="questionnaire_form">
+<form id="questionnaire_form" action="send_mail.php" method="post">
   <label for="q1">Q1 Answer</label>
   <input type="text" name="q1" id="q1" value="whep">
   <br />
@@ -29,5 +28,7 @@
   <br />
   <label for="q3">Q3 Answer</label>
   <input type="text" name="q3" id="q3">
+  <br /><br />
+  <input type="Submit" id="submit">
 </form>
-<button id="submit"/>Submit</button>
+<!-- <button id="submit"/>Submit</button> -->
