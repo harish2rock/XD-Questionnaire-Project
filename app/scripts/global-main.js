@@ -28,7 +28,13 @@ Ember.View.reopen({
                 }
             });
 
+            $(window).bind('beforeunload',function(){
+               // window.location.replace("http://0.0.0.0:8000/");
+                return 'Once you refresh the page, your test will be invalidated.';
+            });
+
         });
+
         // var timer = $('#timer');
         // var start_time = $.now();
         // var time_limit_in_minutes = 0.25;

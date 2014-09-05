@@ -1,11 +1,11 @@
  <div class="row welcome-text">
     <div class="col-xs-12">
-        <h3>Question #{{id}}:</h3>
+        <h3>{{id}}:</h3>
         <p>{{body}}</p>
     </div>
 </div>
 {{#if textarea}}
-{{textarea value=answer id=id}}
+{{textarea value=answer id=id name=id}}
 {{else}}
 {{#if radio}}
   <input type="radio" name="radioOptions" value="{{options.value1}}" class="css-checkbox" id="radio1"><label for="radio1" class="css-label">{{options.value1}}</label><br />
