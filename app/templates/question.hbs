@@ -1,17 +1,18 @@
  <div class="row welcome-text">
     <div class="col-xs-12">
-        <h3>Question #{{id}}:</h3>
+        <h3>{{display_name}}:</h3>
         <p>{{body}}</p>
     </div>
 </div>
 {{#if textarea}}
-{{textarea id=id}}
+  <!-- unbound id -->
+  <textarea id="questions[{{id}}]">
+  </textarea>
 {{else}}
-{{#if radio}}
-  <input type="radio" name="radioOptions" value="{{options.value1}}" class="css-checkbox" id="radio1"><label for="radio1" class="css-label">{{options.value1}}</label><br />
-  <input type="radio" name="radioOptions" value="{{options.value2}}" class="css-checkbox" id="radio2"><label for="radio2" class="css-label">{{options.value2}}</label><br />
-  <input type="radio" name="radioOptions" value="{{options.value3}}" class="css-checkbox" id="radio3"><label for="radio3" class="css-label">{{options.value3}}</label><br />
-  <input type="radio" name="radioOptions" value="{{options.value4}}" class="css-checkbox" id="radio4"><label for="radio4" class="css-label">{{options.value4}}</label><br />
-
-{{/if}}
+  {{#if radio}}
+    <input type="radio" value="{{options.value1}}" class="css-checkbox" id="radio1" name="questions[{{id}}]"><label for="radio1" class="css-label">{{options.value1}}</label><br />
+    <input type="radio" value="{{options.value2}}" class="css-checkbox" id="radio2" name="questions[{{id}}]"><label for="radio2" class="css-label">{{options.value2}}</label><br />
+    <input type="radio" value="{{options.value3}}" class="css-checkbox" id="radio3" name="questions[{{id}}]"><label for="radio3" class="css-label">{{options.value3}}</label><br />
+    <input type="radio" value="{{options.value4}}" class="css-checkbox" id="radio4" name="questions[{{id}}]"><label for="radio4" class="css-label">{{options.value4}}</label><br />
+  {{/if}}
 {{/if}}

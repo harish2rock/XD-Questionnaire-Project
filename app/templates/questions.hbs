@@ -7,9 +7,11 @@
                     <div class="navbar-inner">
                         <ul class="question">
                             {{#each model}}
-                            <li>{{#link-to 'question' this}}
-                            Question {{id}}
-                            {{/link-to}}</li>
+                                <li>
+                                    {{#link-to 'question' this}}
+                                        {{display_name}}
+                                    {{/link-to}}
+                                </li>
                             {{/each}}
                         </ul>
                         <button type="submit" class="submit" id="submit">Submit Answers</button>
