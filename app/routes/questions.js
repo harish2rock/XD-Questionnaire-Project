@@ -2,7 +2,7 @@ export default Ember.Route.extend({
     model: function () {
         return [
     {
-    id: "1",
+    id: "question_1",
     textarea: "yes",
     radio: null,
     options: "",
@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     answer:""
 },
 {
-    id: "2",
+    id: "question_2",
     textarea: null,
     radio: "yes",
     options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
@@ -20,7 +20,7 @@ export default Ember.Route.extend({
     answer: ""
 },
  {
-    id: "3",
+    id: "question_3",
     textarea: "yes",
     radio: null,
     options: "",
@@ -29,7 +29,7 @@ export default Ember.Route.extend({
     answer:""
 },
 {
-    id: "4",
+    id: "question_4",
     textarea: null,
     radio: "yes",
     options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
@@ -38,7 +38,7 @@ export default Ember.Route.extend({
     answer: ""
 },
  {
-    id: "5",
+    id: "question_5",
     textarea: "yes",
     radio: null,
     options: "",
@@ -47,7 +47,7 @@ export default Ember.Route.extend({
     answer:""
 },
 {
-    id: "6",
+    id: "question_6",
     textarea: null,
     radio: "yes",
     options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
