@@ -6,7 +6,7 @@
 </div>
 {{#if textarea}}
   <!-- unbound id -->
-  {{textarea value=answer}}
+  {{textarea value=answer id=id}}
 {{else}}
   {{#if radio}}
     <input type="radio" value="{{options.value1}}" class="css-checkbox" id="radio1" name="{{id}}"><label for="radio1" class="css-label">{{options.value1}}</label><br />
