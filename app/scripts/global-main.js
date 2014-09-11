@@ -1,3 +1,5 @@
+
+
 Ember.View.reopen({
     parentViewDidChange: function(){
          $(document).ready(function(){
