@@ -1,4 +1,12 @@
 
+/* Radio button */
+var a;
+Ember.RadioButton = Ember.View.extend({
+    tagName : "input",
+    type : "radio",
+    attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"]
+
+});
 
 Ember.View.reopen({
     parentViewDidChange: function(){
