@@ -10,5 +10,7 @@ loadInitializers(App, 'appkit');
 
 export default App;
 
+
+
 require('appkit/scripts/global-main');
 
