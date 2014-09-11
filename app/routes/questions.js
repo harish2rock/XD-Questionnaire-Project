@@ -4,6 +4,7 @@ export default Ember.Route.extend({
         return [
     {
     id: "Question-1",
+    post_name: "questions[question_1]",
     display_name: "Question #1",
     textarea: "yes",
     radio: null,
@@ -14,6 +15,7 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-2",
+    post_name: "questions[question_2]",
     display_name: "Question #2",
     textarea: null,
     radio: "yes",
@@ -24,6 +26,7 @@ export default Ember.Route.extend({
 },
  {
     id: "Question-3",
+    post_name: "questions[question_3]",
     display_name: "Question #3",
     textarea: "yes",
     radio: null,
@@ -34,6 +37,7 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-4",
+    post_name: "questions[question_4]",
     display_name: "Question #4",
     textarea: null,
     radio: "yes",
@@ -44,6 +48,7 @@ export default Ember.Route.extend({
 },
  {
     id: "Question-5",
+    post_name: "questions[question_5]",
     display_name: "Question #5",
     textarea: "yes",
     radio: null,
@@ -54,6 +59,7 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-6",
+    post_name: "questions[question_6]",
     display_name: "Question #6",
     textarea: null,
     radio: "yes",

@@ -6,12 +6,12 @@
 </div>
 {{#if textarea}}
   <!-- unbound id -->
-  {{textarea value=answer id=id}}
+  {{textarea value=answer id=id name=post_name}}
 {{else}}
   {{#if radio}}
-    <input type="radio" value="{{options.value1}}" class="css-checkbox" id="radio1" name="{{id}}"><label for="radio1" class="css-label">{{options.value1}}</label><br />
-    <input type="radio" value="{{options.value2}}" class="css-checkbox" id="radio2" name="{{id}}"><label for="radio2" class="css-label">{{options.value2}}</label><br />
-    <input type="radio" value="{{options.value3}}" class="css-checkbox" id="radio3" name="{{id}}"><label for="radio3" class="css-label">{{options.value3}}</label><br />
-    <input type="radio" value="{{options.value4}}" class="css-checkbox" id="radio4" name="{{id}}"><label for="radio4" class="css-label">{{options.value4}}</label><br />
+    <input type="radio" value="{{options.value1}}" class="css-checkbox" id="radio1" name="{{post_name}}"><label for="radio1" class="css-label">{{options.value1}}</label><br />
+    <input type="radio" value="{{options.value2}}" class="css-checkbox" id="radio2" name="{{post_name}}"><label for="radio2" class="css-label">{{options.value2}}</label><br />
+    <input type="radio" value="{{options.value3}}" class="css-checkbox" id="radio3" name="{{post_name}}"><label for="radio3" class="css-label">{{options.value3}}</label><br />
+    <input type="radio" value="{{options.value4}}" class="css-checkbox" id="radio4" name="{{post_name}}"><label for="radio4" class="css-label">{{options.value4}}</label><br />
   {{/if}}
 {{/if}}
