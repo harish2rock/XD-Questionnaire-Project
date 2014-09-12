@@ -7,11 +7,18 @@
                     <div class="navbar-inner">
                         <ul class="question">
                             {{#each model}}
+                            {{#if textarea}}
                                 <li>
+                            {{else}}
+                            <li class="radios">
+                                {{/if}}
                                     {{#link-to 'question' this}}
                                         {{display_name}}
                                     {{/link-to}}
                                 </li>
+                                {{#if radio}}
+                                 {{input type="hidden" id=id }}
+                                 {{/if}}
                             {{/each}}
                         </ul>
                         <button type="submit" class="submit" id="submit">Submit Answers</button>

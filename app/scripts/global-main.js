@@ -1,16 +1,52 @@
 
-/* Radio button */
-var a;
-Ember.RadioButton = Ember.View.extend({
-    tagName : "input",
-    type : "radio",
-    attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"]
+// /* Radio button */
+// Ember.RadioButton = Ember.Component.extend({
+//     tagName : "input",
+//     type : "radio",
+//     attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"],
+//     click : function() {
+//     var id = this.name;
+//     var value = $('input[name='+id+']:checked').val();
+//    $('#'+id).val(value);
+//    this.set("selection", this.$().val());
+//    //this.set("val", value);
+//   },
+//   didInsertElement: function() {
+//     // $('input[type=radio]').each(function() {
+//                      var radioOption = this.get("value");
+//     var name = this.name;
+//     var radioValue = $('#'+name).val();
+//      if(radioValue == radioOption) {
+//      //   alert('test');
+//          $("input[value="+radioOption+"]").prop("checked", true);
+//     }
 
-});
+
+//           //  });
+//   },
+//   render: function() {
+//     // $('input[type=radio]').each(function() {
+//                      var radioOption = this.get("value");
+//     var name = this.name;
+//     var radioValue = $('#'+name).val();
+//      if(radioValue == radioOption) {
+//      //   alert('test');
+//          $("input[value="+radioOption+"]").prop("checked", true);
+//     }
+
+
+//           //  });
+//   }
+
+
+// });
+
+
 
 Ember.View.reopen({
     parentViewDidChange: function(){
          $(document).ready(function(){
+
 
             $('#terms').click(function(){
                 $('#termsModal').modal({
@@ -19,6 +55,46 @@ Ember.View.reopen({
                     backdrop: true
                 });
             });
+
+
+
+
+         //    var name;
+         //    var radioValue;
+         //    var radioOption;
+
+
+
+         //   $('.radios').on('click',function() {
+         //      name = $(this).next('input').attr('id');
+         //     radioValue = $('#'+name).val();
+         //     });
+         // //     $('input[type=radio]').each(function() {
+
+         //    $('input[name='+name+']').each(function() {
+
+         //          radioOption = $(this).val();
+         //         alert(radioOption);
+         //        //  if(radioValue == radioOption) {
+         //        //     $("input[value="+radioOption+"]").prop("checked", true);
+         //        // }
+         //    });
+
+
+         //    });
+
+
+//           $("form").bind("DOMSubtreeModified", function() {
+//              $('input[type=radio]').each(function() {
+//       var radioOption = $(this).val();
+//     var name = this.name;
+//     var radioValue = $('#'+name).val();
+//      $("input[name="+name+"]").prop("checked", false);
+//     if(radioValue == radioOption) {
+//         $("input[value="+radioOption+"]").prop("checked", true);
+//     }
+//     });
+// });
 
             $('#btnStart').click(function () {
 
@@ -91,8 +167,18 @@ Ember.View.reopen({
 // });
 
 
-    },
-    didInsertElement: function(){
-
     }
+//     didInsertElement: function(){
+//              $(document).ready(function() {
+//                 $('.radios').on('click',function() {
+//              $('input[type=hidden]').each(function() {
+//   var id = $(this).attr('id');
+//   if($('#'+id).val() == '') {
+// $("input[name="+id+"]").prop("checked", false);  }
+// });
+//          });
+
+//         });
+//     }
 });
+

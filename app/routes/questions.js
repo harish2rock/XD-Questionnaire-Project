@@ -13,17 +13,39 @@ export default Ember.Route.extend({
     body: "Write CSS classes that will remove the rounded corners from the Earth.",
     answer:""
 },
-{
+// {
+//     id: "Question-2",
+//     post_name: "questions[question_2]",
+//     display_name: "Question #2",
+//     textarea: null,
+//     radio: "yes",
+//     options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
+//     title: "Javascript",
+//     body: "Select your favorite language",
+//     answer: ""
+// },
+ {
     id: "Question-2",
     post_name: "questions[question_2]",
     display_name: "Question #2",
-    textarea: null,
-    radio: "yes",
-    options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
-    title: "Javascript",
-    body: "Select your favorite language",
-    answer: ""
+    textarea: "yes",
+    radio: null,
+    options: "",
+    title: "CSS",
+    body: "Write CSS classes that will remove the rounded corners from the Earth.",
+    answer:""
 },
+// {
+//     id: "Question-4",
+//     post_name: "questions[question_4]",
+//     display_name: "Question #4",
+//     textarea: null,
+//     radio: "yes",
+//     options: { value1: "e", value2: "f", value3: "g", value4: "h" },
+//     title: "Javascript",
+//     body: "Select your favorite language",
+//     answer: ""
+// },
  {
     id: "Question-3",
     post_name: "questions[question_3]",
@@ -34,40 +56,19 @@ export default Ember.Route.extend({
     title: "CSS",
     body: "Write CSS classes that will remove the rounded corners from the Earth.",
     answer:""
-},
-{
-    id: "Question-4",
-    post_name: "questions[question_4]",
-    display_name: "Question #4",
-    textarea: null,
-    radio: "yes",
-    options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
-    title: "Javascript",
-    body: "Select your favorite language",
-    answer: ""
-},
- {
-    id: "Question-5",
-    post_name: "questions[question_5]",
-    display_name: "Question #5",
-    textarea: "yes",
-    radio: null,
-    options: "",
-    title: "CSS",
-    body: "Write CSS classes that will remove the rounded corners from the Earth.",
-    answer:""
-},
-{
-    id: "Question-6",
-    post_name: "questions[question_6]",
-    display_name: "Question #6",
-    textarea: null,
-    radio: "yes",
-    options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
-    title: "Javascript",
-    body: "Select your favorite language",
-    answer: ""
 }
+// {
+//     id: "Question-6",
+//     post_name: "questions[question_6]",
+//     display_name: "Question #6",
+//     textarea: null,
+//     radio: "yes",
+//     options: { value1: "a", value2: "b", value3: "c", value4: "d" },
+//     title: "Javascript",
+//     body: "Select your favorite language",
+//     answer: ""
+// }
 ];
     }
 });
+

@@ -7,12 +7,12 @@
 {{#if textarea}}
   <!-- unbound id -->
   {{textarea value=answer id=id name=post_name}}
-{{else}}
+  {{else}}
   {{#if radio}}
-    {{view Ember.RadioButton name="radioOptions" id="radio1"   value=options.value1}}<label for="radio1" >{{options.value1}}</label><br />
- {{view Ember.RadioButton name="radioOptions" id="radio2"   value=options.value2 }}<label for="radio2" >{{options.value2}}</label><br />
- {{view Ember.RadioButton name="radioOptions" id="radio3"   value=options.value3 }}<label for="radio3">{{options.value3}}</label><br />
- {{view Ember.RadioButton name="radioOptions" id="radio4"   value=options.value4 }}<label for="radio4" >{{options.value4}}</label><br />
+  {{view Ember.RadioButton name=id    value=options.value1 class="radio-class" }}<label for="radio1" >{{options.value1}}</label><br />
+ {{view Ember.RadioButton name=id   value=options.value2 class="radio-class"}}<label for="radio2" >{{options.value2}}</label><br />
+ {{view Ember.RadioButton name=id    value=options.value3 class="radio-class"}}<label for="radio3">{{options.value3}}</label><br />
+ {{view Ember.RadioButton name=id    value=options.value4 class="radio-class"}}<label for="radio4" >{{options.value4}}</label><br />
 
-  {{/if}}
+{{/if}}
 {{/if}}
