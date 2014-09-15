@@ -20,48 +20,7 @@
             </nav>
         </div>
         <div class="col-xs-9">
-            <form id="questionnaire_form" action="send_mail.php" method="post">
-                {{#each model}}
-                    {{#if _view.contentIndex}}
-                    <div class="question-info hidden" {{bind-attr id=id}}>
-                        <div class="row welcome-text">
-                            <div class="col-xs-12">
-                                <h3>{{display_name}}:</h3>
-                                <p>{{body}}</p>
-                            </div>
-                        </div>
-                        {{#if textarea}}
-                         {{textarea value=answer name=post_name}}
-                         {{else}}
-                         {{view Ember.RadioButton name=id  value=options.value1 class="radio-class" }}<label for="radio1" >{{options.value1}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value2 class="radio-class" }}<label for="radio1" >{{options.value2}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value3 class="radio-class" }}<label for="radio1" >{{options.value3}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value4 class="radio-class" }}<label for="radio1" >{{options.value4}}</label>
-                         {{/if}}
-                    </div>
-                    {{else}}
-
-                        <div class="question-info" {{bind-attr id=id}}>
-                         <div class="row welcome-text">
-                            <div class="col-xs-12">
-                                <h3>{{display_name}}:</h3>
-                                <p>{{body}}</p>
-                            </div>
-                        </div>
-                          {{#if textarea}}
-                         {{textarea value=answer name=post_name}}
-                         {{else}}
-                           {{view Ember.RadioButton name=id  value=options.value1 class="radio-class" }}<label for="radio1" >{{options.value1}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value2 class="radio-class" }}<label for="radio1" >{{options.value2}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value3 class="radio-class" }}<label for="radio1" >{{options.value3}}</label><br />
-                           {{view Ember.RadioButton name=id  value=options.value4 class="radio-class" }}<label for="radio1" >{{options.value4}}</label>
-                         {{/if}}
-                    </div>
-
-                    {{/if}}
-                    <!-- unbound id -->
-            {{/each}}
-        </form>
+            {{partial "question" }}
         </div>
     </div>
 </div>
