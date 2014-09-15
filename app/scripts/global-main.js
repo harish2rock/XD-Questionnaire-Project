@@ -1,45 +1,10 @@
 
-// /* Radio button */
-// Ember.RadioButton = Ember.Component.extend({
-//     tagName : "input",
-//     type : "radio",
-//     attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"],
-//     click : function() {
-//     var id = this.name;
-//     var value = $('input[name='+id+']:checked').val();
-//    $('#'+id).val(value);
-//    this.set("selection", this.$().val());
-//    //this.set("val", value);
-//   },
-//   didInsertElement: function() {
-//     // $('input[type=radio]').each(function() {
-//                      var radioOption = this.get("value");
-//     var name = this.name;
-//     var radioValue = $('#'+name).val();
-//      if(radioValue == radioOption) {
-//      //   alert('test');
-//          $("input[value="+radioOption+"]").prop("checked", true);
-//     }
-
-
-//           //  });
-//   },
-//   render: function() {
-//     // $('input[type=radio]').each(function() {
-//                      var radioOption = this.get("value");
-//     var name = this.name;
-//     var radioValue = $('#'+name).val();
-//      if(radioValue == radioOption) {
-//      //   alert('test');
-//          $("input[value="+radioOption+"]").prop("checked", true);
-//     }
-
-
-//           //  });
-//   }
-
-
-// });
+/* Radio button */
+Ember.RadioButton = Ember.Component.extend({
+    tagName : "input",
+    type : "radio",
+    attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"]
+});
 
 
 
@@ -55,6 +20,13 @@ Ember.View.reopen({
                     backdrop: true
                 });
             });
+
+            $('.question li a').on('click',function() {
+  var a = $(this).attr('class');
+  $('.question-info').addClass('hidden');
+  $('#'+a).removeClass('hidden');
+
+});
 
 
 
