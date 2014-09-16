@@ -21,12 +21,6 @@ Ember.View.reopen({
                 });
             });
 
-            $('.question li a').on('click',function() {
-  var a = $(this).attr('class');
-  $('.question-info').addClass('hidden');
-  $('#'+a).removeClass('hidden');
-
-});
 
 
 
@@ -139,18 +133,18 @@ Ember.View.reopen({
 // });
 
 
-    }
-//     didInsertElement: function(){
-//              $(document).ready(function() {
-//                 $('.radios').on('click',function() {
-//              $('input[type=hidden]').each(function() {
-//   var id = $(this).attr('id');
-//   if($('#'+id).val() == '') {
-// $("input[name="+id+"]").prop("checked", false);  }
-// });
-//          });
+    },
+    didInsertElement: function(){
+             $(document).ready(function() {
+                $('.question li a').on('click',function() {
+  var a = $(this).attr('class');
+  $('.question-info').addClass('hidden');
+  $('#'+a).removeClass('hidden');
 
-//         });
-//     }
+});
+
+
+        });
+    }
 });
 
