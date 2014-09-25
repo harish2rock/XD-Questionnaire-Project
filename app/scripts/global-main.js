@@ -6,7 +6,38 @@ Ember.RadioButton = Ember.Component.extend({
     attributeBindings : ['name', 'type', 'value', 'id', "checked:checked"]
 });
 
+Ember.TextField.reopen({
+  attributeBindings: ['data-rule-required', 'data-rule-alpha', 'data-msg-required', 'data-rule-phoneUS', 'data-rule-email', 'data-rule-equalto', 'data-rule-zipcodeUS', 'name', 'data-rule-showError']
+});
 
+Ember.Submit = Ember.View.extend({
+  classNames: ['submit'],
+  tagName: 'button',
+  click: function () {
+    $('#questionnaire_form').validate({
+         submitHandler: function () {
+
+            var formData = $("#questionnaire_form").serializeArray();
+    console.log(formData);
+    $.post("send_mail.php", formData)
+      .done(function(data){
+        console.log("post succeeded!")
+        // redirect to thank you page here
+        $('#question-page').addClass('hidden');
+        $('#thank-you').removeClass('hidden');
+      })
+      .fail(function(data){
+        console.log("failed to post")
+      })
+      .always(function(data){
+      })
+
+
+
+      }
+    });
+}
+});
 
 Ember.View.reopen({
     parentViewDidChange: function(){
@@ -20,6 +51,8 @@ Ember.View.reopen({
                     backdrop: true
                 });
             });
+
+
 
             $('#btnStart').click(function () {
 
@@ -50,32 +83,11 @@ Ember.View.reopen({
     didInsertElement: function(){
              $(document).ready(function() {
                 $('.question li a').on('click',function() {
-  var a = $(this).attr('class');
-  $('.question-info').addClass('hidden');
-  $('#'+a).removeClass('hidden');
-
-});
-
-  //alert('test');
-  $('#submit').on('click',function(e){
-    //e.preventDefault();
-    var formData = $("#questionnaire_form").serializeArray();
-    console.log(formData);
-    $.post("send_mail.php", formData)
-      .done(function(data){
-        console.log("post succeeded!")
-        // redirect to thank you page here
-      })
-      .fail(function(data){
-        console.log("failed to post")
-      })
-      .always(function(data){
-      })
-  });
-
-
-
-        });
-    }
+                      var a = $(this).attr('class');
+                      $('.question-info').addClass('hidden');
+                      $('#'+a).removeClass('hidden');
+                    });
+            });
+        }
 });
 

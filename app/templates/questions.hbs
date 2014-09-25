@@ -1,28 +1,40 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-3">
-            <img src="assets/images/logo.png" alt="Perficient XD" class="logo">
-            <nav>
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <ul class="question">
-                            {{#each model}}
-                                <li>
-                                   {{!--  {{#link-to 'question' this}} --}}
-                                     <a {{bind-attr class=id}}> {{display_name}}</a>
-                                  {{!--   {{/link-to}} --}}
-                                </li>
-                               {{/each}}
-                        </ul>
-                        {{#link-to 'thank-you'}}<button type="submit" class="submit" id="submit">Submit Answers</button>{{/link-to}}
+<div id="question-page">
+    <div class="container">
+    <form id="questionnaire_form">
+        <div class="row">
+            <div class="col-xs-3">
+                <img src="assets/images/logo.png" alt="Perficient XD" class="logo">
+                <nav>
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <ul class="question">
+                                {{#each model}}
+                                    <li>
+                                       {{!--  {{#link-to 'question' this}} --}}
+                                         <a {{bind-attr class=id}}> {{display_name}}</a>
+                                      {{!--   {{/link-to}} --}}
+                                    </li>
+                                   {{/each}}
+                            </ul>
+                            {{!-- {{#link-to 'thank-you'}}<button type="submit" class="submit" id="submit">Submit Answers</button>{{/link-to}} --}}
+                            {{#view Ember.Submit id="submit"}}Submit Answers {{/view}}
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
+            <div class="col-xs-9">
+                {{partial "question" }}
+            </div>
         </div>
-        <div class="col-xs-9">
-            {{partial "question" }}
-        </div>
+    </form>
     </div>
 </div>
 
-
+<div id="thank-you" class="hidden">
+    <div class="container">
+        {{partial "logo"}}
+        <div class="alert alert-success" role="alert">
+          Thank you! Your answers have been successfully submitted. We will review and get back to you.
+        </div>
+    </div>
+</div>
