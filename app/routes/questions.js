@@ -4,7 +4,7 @@ export default Ember.Route.extend({
         return [
     {
     id: "Question-0",
-    post_name: { value1: "name", value2: "emailid"},
+    answer_name: { value1: "name", value2: "email"},
     display_name: "My Information",
     textarea: null,
     radio: null,
@@ -16,7 +16,8 @@ export default Ember.Route.extend({
 },
     {
     id: "Question-1",
-    post_name: "questions[question_1]",
+    question_name: "questions[question_1]",
+    answer_name: "answers[answer_1]",
     display_name: "Question #1",
     textarea: "yes",
     radio: null,
@@ -29,7 +30,8 @@ export default Ember.Route.extend({
 
  {
     id: "Question-2",
-    post_name: "questions[question_2]",
+    question_name: "questions[question_2]",
+    answer_name: "answers[answer_2]",
     display_name: "Question #2",
     textarea: "yes",
     radio: null,
@@ -41,7 +43,8 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-3",
-    post_name: "questions[question_3]",
+    question_name: "questions[question_3]",
+    answer_name: "answers[answer_3]",
     display_name: "Question #3",
     textarea: null,
     textfield: null,
@@ -53,7 +56,8 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-4",
-    post_name: "questions[question_4]",
+    question_name: "questions[question_4]",
+    answer_name: "answers[answer_4]",
     display_name: "Question #4",
     textarea: null,
     textfield: null,
@@ -65,7 +69,8 @@ export default Ember.Route.extend({
 },
  {
     id: "Question-5",
-    post_name: "questions[question_5]",
+    question_name: "questions[question_5]",
+    answer_name: "answers[answer_5]",
     display_name: "Question #5",
     textarea: "yes",
     radio: null,
@@ -77,7 +82,8 @@ export default Ember.Route.extend({
 },
 {
     id: "Question-6",
-    post_name: "questions[question_6]",
+    question_name: "questions[question_6]",
+    answer_name: "answers[answer_6]",
     display_name: "Question #6",
     textarea: null,
     textfield: null,
@@ -91,12 +97,8 @@ export default Ember.Route.extend({
     },
     actions: {
     redirect: function() {
-
-
             this.transitionTo('thank-you');
-
-}
-
+        }
     }
 });
 
