@@ -7,41 +7,41 @@ Ember.RadioButton = Ember.Component.extend({
 });
 
 Ember.TextField.reopen({
-  attributeBindings: ['data-rule-required', 'data-rule-alpha', 'data-msg-required', 'data-rule-phoneUS', 'data-rule-email', 'data-rule-equalto', 'data-rule-zipcodeUS', 'name', 'data-rule-showError']
+    attributeBindings: ['data-rule-required', 'data-rule-alpha', 'data-msg-required', 'data-rule-phoneUS', 'data-rule-email', 'data-rule-equalto', 'data-rule-zipcodeUS', 'name', 'data-rule-showError']
 });
 
 Ember.Submit = Ember.View.extend({
-  classNames: ['submit'],
-  tagName: 'button',
-  click: function () {
-    $('#questionnaire_form').validate({
-         submitHandler: function () {
+    classNames: ['submit'],
+    tagName: 'button',
+    click: function () {
+        $('#questionnaire_form').validate({
+            submitHandler: function () {
 
-            var formData = $("#questionnaire_form").serializeArray();
-    console.log(formData);
-    $.post("send_mail.php", formData)
-      .done(function(data){
-        console.log("post succeeded!")
-        // redirect to thank you page here
-        $('#question-page').addClass('hidden');
-        $('#thank-you').removeClass('hidden');
-      })
-      .fail(function(data){
-        console.log("failed to post")
-      })
-      .always(function(data){
-      })
+                var formData = $("#questionnaire_form").serializeArray();
+                console.log(formData);
+                $.post("send_mail.php", formData)
+                .done(function(data){
+                    console.log("post succeeded!")
+                    // redirect to thank you page here
+                    $('#question-page').addClass('hidden');
+                    $('#thank-you').removeClass('hidden');
+                })
+                .fail(function(data){
+                    console.log("failed to post")
+                })
+                .always(function(data){
+                })
 
 
 
-      }
-    });
-}
+            }
+        });
+    }
 });
 
 Ember.View.reopen({
     parentViewDidChange: function(){
-         $(document).ready(function(){
+        $(document).ready(function(){
 
 
             $('#terms').click(function(){
@@ -73,21 +73,41 @@ Ember.View.reopen({
             });
 
             $(window).bind('beforeunload',function(){
-               // window.location.replace("http://0.0.0.0:8000/");
+                // window.location.replace("http://0.0.0.0:8000/");
                 return 'Once you refresh the page, your test will be invalidated.';
             });
+
 
         });
 
     },
     didInsertElement: function(){
-             $(document).ready(function() {
-                $('.question li a').on('click',function() {
-                      var a = $(this).attr('class');
-                      $('.question-info').addClass('hidden');
-                      $('#'+a).removeClass('hidden');
-                    });
+        $(document).ready(function() {
+            $('.question li a').on('click',function() {
+                var a = $(this).attr('class');
+                $('.question-info').addClass('hidden');
+                $('#'+a).removeClass('hidden');
             });
-        }
-});
 
+            // Textarea char limit
+            $.fn.extend( {
+                limiter: function(limit, elem) {
+                    $(this).on("keyup focus", function() {
+                        setCount(this, elem);
+                    });
+                    function setCount(src, elem) {
+                        var chars = src.value.length;
+                        if (chars > limit) {
+                            src.value = src.value.substr(0, limit);
+                            chars = limit;
+                        }
+                        elem.html( limit - chars );
+                    }
+                    setCount($(this)[0], elem);
+                }
+            });
+            var elem = $(".chars span");
+            $('textarea').limiter(140, elem);
+        });
+    }
+});

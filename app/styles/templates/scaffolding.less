@@ -2,35 +2,6 @@ html, body, .container {
     height: 100%;
 }
 
-.ember-view {
-    min-height: 100%;
-}
-
-.main {
-    padding: 0 15px 50px;
-}
-
-.footer {
-    position: relative;
-    margin-top: -50px;
-    height: 50px;
-    clear:both;
-    padding-top:20px;
-}
-
-body {
-    background-color: @body-bg;
-}
-
-div.ember-view {
-    background-color: @wrap-bg;
-    height: 100%;
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 15px;
-    width:90%;
-}
-
 .container {
     display:table;
     margin-top: 0;
@@ -45,13 +16,48 @@ div.ember-view {
     height: 100%;
 }
 
-.col-xs-3, .col-xs-9 {
+.rightcol {
     display: table-cell;
     float: none;
 }
 
-.col-xs-3 {
+.leftcol {
     background-color: #000000;
-    padding-top: 0;
-    vertical-align: top;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+body {
+    background-color: @body-bg;
+}
+
+.ember-view {
+    min-height: 100%;
+}
+
+div.ember-view {
+    background-color: @wrap-bg;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,.4);
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 15px;
+    width:90%;
+}
+
+.main {
+    padding: 0 15px 50px;
+}
+
+.footer {
+    position: relative;
+    margin-top: -50px;
+    height: 50px;
+    clear:both;
+    padding-top:20px;
 }

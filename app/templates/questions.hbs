@@ -1,8 +1,7 @@
 <div id="question-page">
-    <div class="container">
-    <form id="questionnaire_form">
+    <form id="questionnaire_form" class="container" role="form">
         <div class="row">
-            <div class="col-xs-3">
+            <div class="col-xs-3 leftcol">
                 <img src="assets/images/logo.png" alt="Perficient XD" class="logo">
                 <nav>
                     <div class="navbar">
@@ -17,17 +16,17 @@
                                    {{/each}}
                             </ul>
                             {{!-- {{#link-to 'thank-you'}}<button type="submit" class="submit" id="submit">Submit Answers</button>{{/link-to}} --}}
-                            {{#view Ember.Submit id="submit"}}Submit Answers {{/view}}
+
                         </div>
                     </div>
                 </nav>
+                {{#view Ember.Submit id="submit"}}Submit Answers {{/view}}
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-9 rightcol">
                 {{partial "question" }}
             </div>
         </div>
     </form>
-    </div>
 </div>
 
 <div id="thank-you" class="hidden">
