@@ -86,7 +86,7 @@ Ember.View.reopen({
             $('.question li a').on('click',function() {
                 var a = $(this).attr('class');
                 $('.question-info').addClass('hidden');
-                $('#'+a).removeClass('hidden');
+                $('#'+a).removeClass('hidden').find('textarea').focus();
             });
 
             // Textarea char limit

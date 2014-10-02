@@ -12,7 +12,7 @@
         </div>
         {{input type="hidden" name=question_name value=body}}
         {{#if textarea}}
-            {{textarea value=answer name=answer_name maxlength="140" class="form-control" data-limit="40" autofocus="autofocus"}}
+            {{textarea value=answer name=answer_name maxlength="140" class="form-control" data-limit="40"}}
             <div class="chars">Characters remaining: <span></span></div>
         {{else}}
             {{#if textfield}}
