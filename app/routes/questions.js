@@ -2,18 +2,18 @@ export default Ember.Route.extend({
 
     model: function () {
         return [
-    {
-    id: "Question-0",
-    answer_name: { value1: "name", value2: "email"},
-    display_name: "My Information",
-    textarea: null,
-    radio: null,
-    textfield: "yes",
-    options: { value1: "Name", value2: "Email"},
-    title: "Your Info",
-    body: "Please enter the below information",
-    answer:""
-},
+//     {
+//     id: "Question-0",
+//     answer_name: { value1: "name", value2: "email"},
+//     display_name: "My Information",
+//     textarea: null,
+//     radio: null,
+//     textfield: "yes",
+//     options: { value1: "Name", value2: "Email"},
+//     title: "Your Info",
+//     body: "Please enter the below information",
+//     answer:""
+// },
     {
     id: "Question-1",
     question_name: "questions[question_1]",

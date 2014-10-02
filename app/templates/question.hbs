@@ -16,14 +16,7 @@
             <div class="chars">Characters remaining: <span></span></div>
         {{else}}
             {{#if textfield}}
-            <div class="form-group">
-                <label for="name" class="col-xs-12 col-sm-2 control-label">{{options.value1}}</label>
-                <div class="col-xs-12 col-sm-10">{{view Ember.TextField disabled=entryNotAllowed name=answer_name.value1 class="form-control" id="name" data-rule-required="true" data-rule-alpha="true" data-msg-required="Please enter a valid name"}}</div>
-            </div>
-            <div class="form-group">
-                <label for="email" class="col-xs-12 col-sm-2 control-label">{{options.value2}}</label>
-                <div class="col-xs-12 col-sm-10">{{view Ember.TextField disabled=entryNotAllowed name=answer_name.value2 class="form-control" id="email" data-rule-required="true" data-rule-email="true" data-msg-required="Please enter a valid email address"}}</div>
-            </div>
+
 
             <!--<div class="col-sm-3"><p class="strong">{{options.value1}}: </p></div>
     <div class="col-sm-9"><p>{{view Ember.TextField disabled=entryNotAllowed name=answer_name.value1 data-rule-required="true" data-rule-alpha="true" data-msg-required="Please enter a valid name"}} </p></div>

@@ -10,14 +10,29 @@ Ember.TextField.reopen({
     attributeBindings: ['data-rule-required', 'data-rule-alpha', 'data-msg-required', 'data-rule-phoneUS', 'data-rule-email', 'data-rule-equalto', 'data-rule-zipcodeUS', 'name', 'data-rule-showError']
 });
 
-Ember.Submit = Ember.View.extend({
+Ember.BeginTest = Ember.View.extend({
     classNames: ['submit'],
     tagName: 'button',
     click: function () {
         $('#questionnaire_form').validate({
             submitHandler: function () {
 
-                var formData = $("#questionnaire_form").serializeArray();
+            $('#my-info').slideUp('slow');
+            $('#test-questions').slideDown('slow');
+
+
+            }
+        });
+    }
+});
+
+
+Ember.Submit = Ember.View.extend({
+    classNames: ['submit'],
+    tagName: 'button',
+    click: function () {
+        $('#submit').prop('disabled', true);
+           var formData = $("#questionnaire_form").serializeArray();
                 console.log(formData);
                 $.post("send_mail.php", formData)
                 .done(function(data){
@@ -31,11 +46,6 @@ Ember.Submit = Ember.View.extend({
                 })
                 .always(function(data){
                 })
-
-
-
-            }
-        });
     }
 });
 
@@ -72,24 +82,16 @@ Ember.View.reopen({
                 }
             });
 
-            $(window).bind('beforeunload',function(){
-                // window.location.replace("http://0.0.0.0:8000/");
-                return 'Once you refresh the page, your test will be invalidated.';
-            });
-
-
-        });
-
-    },
-    didInsertElement: function(){
-        $(document).ready(function() {
-            $('.question li a').on('click',function() {
+              $('.question li a').on('click',function() {
+                $('.question li a').removeClass('active');
                 var a = $(this).attr('class');
+                $('.'+a).addClass('active');
+                var b = a;
                 $('.question-info').addClass('hidden');
-                $('#'+a).removeClass('hidden').find('textarea').focus();
+                $('#'+b).removeClass('hidden').find('textarea').focus();
             });
 
-            // Textarea char limit
+              // Textarea char limit
             $.fn.extend( {
                 limiter: function(limit, elem) {
                     $(this).on("keyup focus", function() {
@@ -107,7 +109,22 @@ Ember.View.reopen({
                 }
             });
             var elem = $(".chars span");
-            $('textarea').limiter(140, elem);
+            $('textarea').limiter(255, elem);
+
+            $(window).bind('beforeunload',function(){
+                // window.location.replace("http://0.0.0.0:8000/");
+                return 'Once you refresh the page, your test will be invalidated.';
+            });
+
+
+        });
+
+    },
+    didInsertElement: function(){
+        $(document).ready(function() {
+
+
+
         });
     }
 });

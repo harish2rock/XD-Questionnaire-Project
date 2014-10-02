@@ -1,5 +1,28 @@
 <div id="question-page">
     <form id="questionnaire_form" class="container" role="form">
+            <div id="my-info">
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-10"><h4>Please enter the below information</h4></div>
+                </div>
+                <div class="row">
+                                  <div class="col-xs-offset-2 col-xs-9 form-group">
+                                <label for="name" class="col-xs-12 col-sm-3 control-label">Name: </label>
+                                <div class="col-xs-12 col-sm-9"><input type="text" id="name" name="name" class="ember-view ember-text-field form-control error" data-rule-required="true" data-rule-alpha="true" data-msg-required="Please enter a valid name"></div>
+                            </div>
+                            <div class="col-xs-offset-2 col-xs-9 form-group">
+                                <label for="email" class="col-xs-12 col-sm-3 control-label">Email Address: </label>
+                                <div class="col-xs-12 col-sm-9"><input type="text" id="email" name="email" class="ember-view ember-text-field form-control" data-rule-required="true" data-msg-required="Please enter a valid email address" data-rule-email="true"></div>
+                            </div>
+                        </div>
+                <div class="row">
+                     <div class="col-xs-offset-5 col-xs-3 colsm-offset-5 col-sm-3">
+                       {{!-- <button id="begin-my-test" class="submit">Being My Test</button> --}}
+                       {{#view Ember.BeginTest id="begin-my-test"}}Begin My Test {{/view}}
+                      </div>
+                    </div>
+</div>
+<div id="test-questions">
+    <div class="container">
         <div class="row">
             <div class="col-xs-3 leftcol">
                 <img src="assets/images/logo.png" alt="Perficient XD" class="logo">
@@ -20,12 +43,22 @@
                         </div>
                     </div>
                 </nav>
-                {{#view Ember.Submit id="submit"}}Submit Answers {{/view}}
+
             </div>
             <div class="col-xs-9 rightcol">
                 {{partial "question" }}
             </div>
+
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-offset-4 col-xs-5">
+              {{#view Ember.Submit id="submit"}}Submit Answers {{/view}}
+            </div>
+        </div>
+    </div>
+</div>
     </form>
 </div>
 
