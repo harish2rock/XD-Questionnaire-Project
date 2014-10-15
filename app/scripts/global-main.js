@@ -21,8 +21,44 @@ Ember.BeginTest = Ember.View.extend({
             $('#test-questions').slideDown('slow');
 
 
-            }
-        });
+           }
+       });
+    }
+});
+
+Ember.Question = Ember.View.extend({
+    didInsertElement: function() {
+$.fn.extend( {
+               limiter: function(limit, elem) {
+                    $(this).on("keyup focus", function() {
+                        setCount(this, elem);
+                    });
+                    function setCount(src, elem) {
+                        var chars = src.value.length;
+                        if (chars > limit) {
+                            src.value = src.value.substr(0, limit);
+                            chars = limit;
+                        }
+                        elem.html( limit - chars );
+                    }
+                    setCount($(this)[0], elem);
+                }
+            });
+            var elem = $(".chars span");
+          $('textarea').limiter(255, elem);
+    },
+    click: function() {
+   // $('.question li a').on('click',function() {
+                $('.question li a').removeClass('active');
+                var a = this.elementId;
+                var classname = $('#'+a+' > a').attr('class');
+                $('.'+classname).addClass('active');
+                var b = classname;
+                $('.question-info').addClass('hidden');
+                $('#'+b).removeClass('hidden').find('textarea').focus();
+
+
+           // });
     }
 });
 
@@ -36,13 +72,13 @@ Ember.Submit = Ember.View.extend({
                 console.log(formData);
                 $.post("send_mail.php", formData)
                 .done(function(data){
-                    console.log("post succeeded!")
+                    console.log("post succeeded!");
                     // redirect to thank you page here
                     $('#question-page').addClass('hidden');
                     $('#thank-you').removeClass('hidden');
                 })
                 .fail(function(data){
-                    console.log("failed to post")
+                    console.log("failed to post");
                 })
                 .always(function(data){
                 })
@@ -82,49 +118,16 @@ Ember.View.reopen({
                 }
             });
 
-              $('.question li a').on('click',function() {
-                $('.question li a').removeClass('active');
-                var a = $(this).attr('class');
-                $('.'+a).addClass('active');
-                var b = a;
-                $('.question-info').addClass('hidden');
-                $('#'+b).removeClass('hidden').find('textarea').focus();
-            });
 
-              // Textarea char limit
-            $.fn.extend( {
-                limiter: function(limit, elem) {
-                    $(this).on("keyup focus", function() {
-                        setCount(this, elem);
-                    });
-                    function setCount(src, elem) {
-                        var chars = src.value.length;
-                        if (chars > limit) {
-                            src.value = src.value.substr(0, limit);
-                            chars = limit;
-                        }
-                        elem.html( limit - chars );
-                    }
-                    setCount($(this)[0], elem);
-                }
-            });
-            var elem = $(".chars span");
-            $('textarea').limiter(255, elem);
 
-            $(window).bind('beforeunload',function(){
-                // window.location.replace("http://0.0.0.0:8000/");
-                return 'Once you refresh the page, your test will be invalidated.';
-            });
+           //    //Textarea char limit
+
+
+
 
 
         });
 
-    },
-    didInsertElement: function(){
-        $(document).ready(function() {
-
-
-
-        });
     }
+
 });

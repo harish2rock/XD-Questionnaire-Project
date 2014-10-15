@@ -33,7 +33,7 @@
                                 {{#each model}}
                                     <li>
                                        {{!--  {{#link-to 'question' this}} --}}
-                                         <a {{bind-attr class=id}}> {{display_name}}</a>
+                                         {{#view Ember.Question }}<a {{bind-attr class=id}}> {{display_name}}</a>{{/view}}
                                       {{!--   {{/link-to}} --}}
                                     </li>
                                    {{/each}}
