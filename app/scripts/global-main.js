@@ -99,6 +99,14 @@ Ember.View.reopen({
             });
 
 
+ //             $(window).bind('beforeunload',function(){
+ //                // window.location.replace("http://0.0.0.0:8000/");
+ //                //return 'Once you refresh the page, your test will be invalidated.';
+ // swal("Here's a message!")
+
+ //            });
+
+
 
             $('#btnStart').click(function () {
 
