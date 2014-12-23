@@ -24,7 +24,7 @@ export default Ember.Route.extend({
     textfield: null,
     options: "",
     title: "CSS",
-    body: "Write CSS classes that will remove the rounded corners from the Earth.",
+    body: "What is the benefit of using the new HTML5 tag semantics?",
     answer:""
 },
 
@@ -38,7 +38,7 @@ export default Ember.Route.extend({
     textfield: null,
     options: "",
     title: "HTML",
-    body: "Describe what is a DOCTYPE",
+    body: "Which html/css framework do you use (if any) and why (or why not)?",
     answer:""
 },
 {
@@ -46,12 +46,12 @@ export default Ember.Route.extend({
     question_name: "questions[question_3]",
     answer_name: "answers[answer_3]",
     display_name: "Question #3",
-    textarea: null,
+    textarea: "yes",
     textfield: null,
-    radio: "yes",
-    options: { value1: "css", value2: "html", value3: "javascript", value4: "xml" },
+    radio: null,
+    options: "",
     title: "Javascript",
-    body: "Select your favorite language",
+    body: "How would you create a widget that would fit in a 250px wide area as well as a 400px area?",
     answer: ""
 },
 {
@@ -60,11 +60,11 @@ export default Ember.Route.extend({
     answer_name: "answers[answer_4]",
     display_name: "Question #4",
     textarea: null,
-    textfield: null,
-    radio: "yes",
-    options: { value1: "jQuery", value2: "dojo", value3: "php", value4: "prototype" },
+    textfield: "yes",
+    radio: null,
+    options: "",
     title: "Javascript",
-    body: "Which of the below is not a javascript library ?",
+    body: "What is the lifetime of local storage?",
     answer: ""
 },
  {
