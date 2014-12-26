@@ -137,7 +137,7 @@ export default Ember.Route.extend({
     radio: null,
     options: "",
     title: "CSS",
-    body: "List 3 types of positioning and how they work, and write the differences.",
+    body: "List 3 types of positioning and how they work, and explain the differences.",
     answer: ""
 },
 {
@@ -182,20 +182,7 @@ export default Ember.Route.extend({
     radio: null,
     options: "",
     title: "CSS",
-    body: "What is a technical advantage/disadvantage of using IDs over classes?",
-    answer: ""
-},
-{
-    id: "Question-10",
-    question_name: "questions[question_10]",
-    answer_name: "answers[answer_10]",
-    display_name: "Question #10",
-    textarea: null,
-    textfield: "yes",
-    radio: null,
-    options: "",
-    title: "CSS",
-    body: "Provide the best answer for position: absolute; and position: relative; and how they relate to positioning 'boxes within boxes.'",
+    body: "List one advantage of using IDs over classes. List one disadvantage.",
     answer: ""
 },
 {
@@ -302,6 +289,145 @@ export default Ember.Route.extend({
     body: "Write CSS to make an object rotate (for a webkit browser)",
     answer: ""
 },
+//--------------------------------------------
+{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "What’s your experience with object-oriented JavaScript?",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "How would you avoid conflicts between jQuery and prototype js libraries?",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "How would you select the last item in a list (must work in IE7)?",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "Find the value of an element that can be used (and reused) to be outputted to another element.",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "Without using any libraries such as jQuery, write native JavaScript to toggle the hiding of the “info box” when you click the “toggle” button in the HTML below:
+        <div class=\"container\">
+            <div class=\"infoBox\">
+                <p>Click button to hide/show this message.</p>
+            </div>
+            <button class=\"toggle\" id=”toggleButton”>
+                Toggle Info Box
+            </button>
+        </div>",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "Explain the term truthy as it relates to comparisons in javascript.",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "What will be the output (in the console)  from each of these statements:
+            if(myvar === “not defined”){console.log(“hello”)} ==> ReferenceError: myvar is not defined
+            If(myvar == “not defined”){console.log(“hello”)} ==> ReferenceError: myvar is not defined
+            If(myvar = “not defined”){console.log(“hello”)} ==> hello",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "Show me a basic javascript try catch block that all js functions should have.",
+    answer: ""
+},
+
+//----------------------------------
+
+{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "How would you deal with a browser that does not support HTML5/CSS3(such as IE8) handle a responsive web page?",
+    answer: ""
+},{
+    id: "Question-10",
+    question_name: "questions[question_10]",
+    answer_name: "answers[answer_10]",
+    display_name: "Question #10",
+    textarea: "yes",
+    textfield: null,
+    radio: null,
+    options: "",
+    title: "Javascript",
+    body: "What are a few ways you can improve a site’s performance(load times)?",
+    answer: ""
+}
+
+
 
 ];
     },
