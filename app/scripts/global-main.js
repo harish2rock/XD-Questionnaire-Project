@@ -30,7 +30,7 @@ Ember.Question = Ember.View.extend({
     didInsertElement: function() {
 $.fn.extend( {
                limiter: function(limit, elem) {
-                    $(this).on("keyup focus", function() {
+                    $(this).on("keyup focus show", function() {
                         setCount(this, elem);
                     });
                     function setCount(src, elem) {
@@ -46,6 +46,7 @@ $.fn.extend( {
             });
             var elem = $(".chars span");
           $('textarea').limiter(255, elem);
+          $('input').limiter(255, elem);
     },
     click: function() {
    // $('.question li a').on('click',function() {
