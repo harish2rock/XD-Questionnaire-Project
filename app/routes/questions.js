@@ -56,9 +56,15 @@ export default Ember.Route.extend({
     answer_name: "answers[answer_4]",
     display_name: "Question #4",
     textarea: null,
-    textfield: "yes",
-    radio: null,
-    options: "",
+    textfield: null,
+    radio: "yes",
+    options: {
+        value1: "1 minute",
+        value2: "1 hour",
+        value3: "1 day",
+        value3: "1 week",
+        value3: "This is up to the developer"
+    },
     title: "HTML",
     body: "What is the lifetime of local storage?",
     answer: ""
@@ -94,12 +100,19 @@ export default Ember.Route.extend({
     question_name: "questions[question_7]",
     answer_name: "answers[answer_7]",
     display_name: "Question #7",
-    textarea: "yes",
+    textarea: null,
     textfield: null,
-    radio: null,
-    options: "",
+    radio: "yes",
+    options: {
+        value1: "Less",
+        value2: "Sass",
+        value3: "SCSS",
+        value4: "More than one of the above.",
+        value5: "I haven't used a CSS preprocessor",
+        value6: "I prefer to write vanilla CSS."
+    },
     title: "CSS",
-    body: "Have you used a CSS preprocessor before? Which do you prefer, and why?",
+    body: "Have you used a CSS preprocessor before? If so, which?",
     answer: ""
 },{
     id: "Question-8",
@@ -133,9 +146,15 @@ export default Ember.Route.extend({
     textarea: null,
     textfield: "yes",
     radio: null,
-    options: "",
+    options: {
+        value1: "#333, because the CSS class is applied to the element.",
+        value2: "#000, because the ID attribute is more specific than the class.",
+        value3: "#333, because the values #333 and #000 add up to #333.",
+        value4: "#fff, but only if a light background makes the text impossible to see. Otherwise, #000.",
+        value5: "None of the above. The examples are both invalid CSS colors."
+    },
     title: "CSS",
-    body: "In the following CSS example, what color will the browser render .class-name? #class-name { color: #000;  } .class-name { color: #333; }",
+    body: "In the following CSS example, what color text will the browser render <div class=\"class-name\">?     #class-name { color: #000;  } .class-name { color: #333; }",
     answer: ""
 },{
     id: "Question-11",
@@ -167,9 +186,15 @@ export default Ember.Route.extend({
     answer_name: "answers[answer_13]",
     display_name: "Question #13",
     textarea: null,
-    textfield: "yes",
-    radio: null,
-    options: "",
+    textfield: null,
+    radio: "yes",
+    options: {
+        value1: "Any Sibling",
+        value2: "Adjacent Sibling",
+        value3: "Any Descendant",
+        value4: "Direct Descendant",
+        value5: "Nothing, it is ignored."
+    },
     title: "CSS",
     body: "What does the \">\" (greater-than sign) CSS selector mean?",
     answer: ""
@@ -276,10 +301,16 @@ export default Ember.Route.extend({
     question_name: "questions[question_22]",
     answer_name: "answers[answer_22]",
     display_name: "Question #22",
-    textarea: "yes",
+    textarea: null,
     textfield: null,
-    radio: null,
-    options: "",
+    radio: "yes",
+    options: {
+        value1: "Use the :last CSS pseudo-selector.",
+        value2: "Use the :last-child CSS pseudo-selector.",
+        value3: "Add a CSS class of \"last\" on the HTML element.",
+        value4: "This can only be accomplished with JavaScript",
+        value5: "This cannot be accomplished in IE7.",
+    },
     title: "JavaScript",
     body: "How would you select the last item in a list (must work in IE7)?",
     answer: ""
@@ -293,7 +324,7 @@ export default Ember.Route.extend({
     radio: null,
     options: "",
     title: "JavaScript",
-    body: "Find the value of an element that can be used (and reused) to be output to another element.",
+    body: "Write Javascript to find the value of an element that can be used (and reused) to be output to another element.",
     answer: ""
 },
 // {
@@ -351,7 +382,7 @@ export default Ember.Route.extend({
     radio: null,
     options: "",
     title: "JavaScript",
-    body: "Show me a basic JavaScript try catch block that all JavaScript functions should have.",
+    body: "Write a basic JavaScript try catch block that all JavaScript functions should have.",
     answer: ""
 },
 
