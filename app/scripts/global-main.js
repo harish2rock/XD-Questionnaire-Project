@@ -69,16 +69,16 @@ Ember.Submit = Ember.View.extend({
     click: function () {
         $('#submit').prop('disabled', true);
            var formData = $("#questionnaire_form").serializeArray();
-                console.log(formData);
+                //console.log(formData);
                 $.post("send_mail.php", formData)
                 .done(function(data){
-                    console.log("post succeeded!");
+                    //console.log("post succeeded!");
                     // redirect to thank you page here
                     $('#question-page').addClass('hidden');
                     $('#thank-you').removeClass('hidden');
                 })
                 .fail(function(data){
-                    console.log("failed to post");
+                   /// console.log("failed to post");
                 })
                 .always(function(data){
                 })
