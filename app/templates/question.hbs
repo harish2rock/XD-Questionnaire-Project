@@ -16,7 +16,8 @@
             <div class="chars">Characters remaining: <span></span></div>
         {{else}}
             {{#if textfield}}
-
+            {{input type="text" name=answer_name value=answer class="form-control" maxlength="100"}}
+            <div class="chars">Characters remaining: <span></span></div>
 
             <!--<div class="col-sm-3"><p class="strong">{{options.value1}}: </p></div>
     <div class="col-sm-9"><p>{{view Ember.TextField disabled=entryNotAllowed name=answer_name.value1 data-rule-required="true" data-rule-alpha="true" data-msg-required="Please enter a valid name"}} </p></div>
@@ -43,6 +44,16 @@
         <div class="radio">
             <label>
                 {{view Ember.RadioButton name=answer_name  value=options.value4 class="radio-class"}}{{options.value4}}
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                {{view Ember.RadioButton name=answer_name  value=options.value5 class="radio-class"}}{{options.value5}}
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                {{view Ember.RadioButton name=answer_name  value=options.value6 class="radio-class"}}{{options.value6}}
             </label>
         </div>
         <!--{{view Ember.RadioButton name=answer_name  value=options.value1 class="radio-class" }}<label for="radio1" >{{options.value1}}</label><br />
